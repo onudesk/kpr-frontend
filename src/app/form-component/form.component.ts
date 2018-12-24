@@ -54,6 +54,9 @@ export class FormComponent implements OnInit {
     'locality': [
       { type: 'required', message: 'Locality is required' }
     ],
+    'pincode': [
+      { type: 'required', message: 'pincode is required' }
+    ],
     'bio': [
       { type: 'maxlength', message: 'Bio cannot be more than 256 characters long' },
     ],
@@ -139,6 +142,7 @@ export class FormComponent implements OnInit {
       address1: ['', Validators.required ],
       address2: ['', Validators.required ],
       locality: ['', Validators.required ],
+      pincode: ['', Validators.required ],
       pancard: new FormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('/[A-Za-z]{5}\d{4}[A-Za-z]{1}/g')
